@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cart page</title>
+
+    <link rel="stylesheet" href="index.css" />
+  </head>
+  <style>
+    .Your-Items {
+      margin-top: 20px;
+      font-size: 30px;
+      font-weight: 600;
+      background-color: rgb(254, 216, 146);
+      padding-left: 5%;
+      padding-top: 15px;
+      padding-bottom: 15px;
+      border-radius: 50px;
+      margin-bottom: 50px;
+      box-shadow: 0px 0px 12px 4px rgb(75, 75, 75);
+    }
+    .cartItem {
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+    }
+    .cartItem img {
+      height: 250px;
+      width: 250px;
+    }
+    .cartItem strong {
+      font-size: 24px;
+    }
+    .cartItem span {
+      font-size: 20px;
+      color: black;
+    }
+    ul li {
+      display: flex;
+      flex-direction: column;
+    }
+    #cart-list {
+      display: flex;
+      flex-wrap: wrap !important;
+      gap: 80px;
+      margin-left: 20px;
+    }
+    #cart-list li {
+      background-color: rgb(255, 255, 255);
+      box-shadow: 0px 0px 12px 4px rgb(74, 73, 73);
+    }
+    .nav-bottom p {
+      margin-top: 10px;
+      font-size: 20px;
+    }
+  </style>
+  <body>
+  <header class="margin" >
+    <div class="logo_container">
+    <a href="#"><img class="kk_home"src="assets/kk.png"></img ></a>
+      
+    </div>
+    <nav class="nav_bar">
+      <a href="Project.html">Home</a>
+      <a href="men.html ">SignUp</a>
+       <a href="women.html">Help</a>
+        <a href="kids.html">About</a>
+         <a href="home&living.html">Sell</a>
+          <a href="beauty.html">Today'Deal</a>
+           <a href="about.html">More</a>
+    </nav>
+     <div class="user">
+      <img src="assets/user.png" width="30px " height="35px" style="margin-right: 30px ; ">
+     </div>
+    
+     <div class="cart">
+       <button onclick={sideButton()} class="sidebarButton" >Menu</button>
+        <a href="cart.html">
+      <img src="assets/cart_icon.png" width="30px " height="35px" style="margin-right: 30px ; margin-bottom: -10px;">
+     </div></a>
+  </header>
+ <div class="sidebar" >
+       <a href="index.html">Home</a>
+      <a href="signin.html ">SignUp</a>
+       <a href="help.html">Help</a>
+        <a href="about.html">About</a>
+         <a href="sell.html">Sell</a>
+          <a href="Today'sDeal.html">Today'Deal</a>
+           <a href="#">More</a>
+    </div>
+    <div class="cart">
+      <div class="Your-Items">Your Items</div>
+      <ul class="cartItem" id="cart-list"></ul>
+    </div>
+
+    <script>
+      function displayCartItems() {
+        let cart = JSON.parse(localStorage.getItem("cart")) || [];
+        let cartList = document.getElementById("cart-list");
+        cartList.innerHTML = "";
+        console.log(cart);
+        cart.forEach(function (item, index) {
+          let li = document.createElement("li");
+          li.innerHTML = `
+        <img src="${item.image}" alt="${item.name}" width="50" height="50">
+        <strong>${item.name}</strong> <span>${item.price}</span> 
+        <button onclick="removeItem(${index})">Clear From Cart</button>
+      `;
+          cartList.appendChild(li);
+        });
+      }
+
+      document.addEventListener("DOMContentLoaded", displayCartItems);
+
+      function removeItem(index) {
+        let cart = JSON.parse(localStorage.getItem("cart")) || [];
+        cart.splice(index, 1);
+        localStorage.setItem("cart", JSON.stringify(cart));
+        displayCartItems();
+      }
+    </script>
+    <script src="index.js"></script>
+  </body>
+</html>

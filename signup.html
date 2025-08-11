@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sign Up</title>
+  <link rel="stylesheet" href="signin.css">
+</head>
+<body>
+    <a href="#"><img src="assets/kk.png" class="logo" width="100px" /></a>
+    <div class="sign-container">
+      <h1 class="signIn-title">Sign Up</h1>
+      <form action="index.html" onsubmit="validateform()">
+      <h5 class="input-label">Your name</h5>
+      <input type="text" placeholder="First and last name"class="U" required/>
+      <h5 class="input-label">Mobile number or email</h5>
+      <input type="text" placeholder=" phone number or email"class="U" required>
+       <h5 class="input-label">Password</h5>
+       <input tabindex="text" placeholder="enter Password , atleast 8 character"class="U" required>
+      <button type="submit">continue</button>
+      
+      <p class="signin-condition">
+        By continue, you agree to <span>kk condition </span> of use and privacy
+        Notice .
+      </p>
+      <p class="signin-help">&#9656Need help</p>
+      <hr>
+      <h5 style="font-size: 9px;">Buying for work?</h5>
+      <p class="business"><span> Shop on kk business </span></p>
+    </div>
+    <div class="signin-bottom">
+      <hr>
+      <p>Have an account  &#0</p>
+      <hr>
+    </div>
+    <a href="signin.html">
+    <button type="submit" class="sign-signup-btn"> Login with kk account </button>
+    </a>
+    </form>
+    <footer>
+      <div class="footer-links">
+        <a href="#">Condition of use</a>
+        <a href="#">Privacy Notice</a>
+        <a href="#">Help</a>
+      </div>
+      <p class="footer-copyrigth">© 2025 , kk.com, Inc. or its affilites</p>
+    </footer>
+     
+
+    <script>
+      function validateform(){
+        const input = document.getElementsByClassName(`U`);
+        if(input.value.trim()=== ' '){
+          alert(`please fill required text`);
+          return false;
+        }
+        return true;
+      }
+    </script>
+</body>
+</html>

@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>furniture</title>
+    <link rel="stylesheet" href="index.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css">
+    <link
+      href="https://fonts.googleapis.com/css2?family=Edu+VIC+WA+NT+Hand+Pre:wght@400..700&family=Kapakana:wght@300..400&family=Outfit:wght@100..900&display=swap"
+      rel="stylesheet"
+     />
+      <style>
+      .box-col span{
+        text-decoration: line-through;
+        color: #eb4a0b;
+      }
+      .box-col button{
+        width: 120px;
+        height: 30px;
+        font-size: 15px;
+        font-weight: 500;
+        background-color: rgb(242, 175, 87);
+        border-color:  rgb(253, 192, 113);
+      }
+      .box-col button:hover{
+        width:125px;
+        height: 35px;
+        background-color: rgb(249, 166, 58);
+        box-shadow: 0px 0px 12px 3px rgb(185, 185, 185);
+      }
+      .box-col big{
+        background-color: #055801;
+        border-radius: 2px;
+        padding: 4px 7px ;
+        width: 100px;
+        color: aliceblue;
+      }
+      
+      .btn-wrap{
+        margin-left: 10px;
+        margin-right: 10px;
+        display: flex;
+        justify-content: space-between;
+        cursor: pointer;
+
+      }
+       .nav-bottom p{
+      margin-top: 10px;
+       font-size: 20px;
+    }
+     @media only screen and (max-width: 900px){
+     
+       #imggg{
+        height: 200px;
+        width: 340px !important;
+      } 
+    }
+    </style>
+  </head>
+  <body>
+   <header class="margin" >
+    <div class="logo_container">
+    <a href="#"><img class="kk_home"src="assets/kk.png"></img ></a>
+      
+    </div>
+    <nav class="nav_bar">
+      <a href="index.html">Home</a>
+      <a href="signin.html">SignUp</a>
+       <a href="help.html">Help</a>
+        <a href="about.html">About</a>
+         <a href="sell.html">Sell</a>
+          <a href="Today'sDeal.html">Today'Deal</a>
+           <a href="#">More</a>
+    </nav>
+     <div class="user">
+      <img src="assets/user.png" width="30px " height="35px" style="margin-right: 30px ; ">
+     </div>
+    
+     <div class="cart">
+       <button onclick={sideButton()} class="sidebarButton" >Menu</button>
+        <a href="cart.html">
+      <img src="assets/cart_icon.png" width="30px " height="35px" style="margin-right: 30px ; margin-bottom: -10px;">
+     </div></a>
+  </header>
+ <div class="sidebar" >
+       <a href="index.html">Home</a>
+      <a href="signin.html ">SignUp</a>
+       <a href="help.html">Help</a>
+        <a href="about.html">About</a>
+         <a href="sell.html">Sell</a>
+          <a href="Today'sDeal.html">Today'Deal</a>
+           <a href="#">More</a>
+    </div>
+     <div class="box-row" id="product-list">
+       <div class="box-col product" >
+        
+        <img id="imggg" style="height: 200px; width: 250px;" src="assets/product3-1.jpg">
+        <img src="assets/rating_img.png" width="60px" height="15px">
+        <a href="#">₹240.89<pre style="background-color: rgb(171, 13, 8); color: aliceblue; width: 250px; height: 30px; padding: 4px 7px ;">purches now For better deal</pre> </a><span>₹250.99</span> <big>Save 20%</big> 
+        <p>Buy 3 get 3% Buy 4 get 4% Buy 5 get 5% Off
+FREE delivery Sat, 2 Aug on first order
+Or fastest delivery Tomorrow, 1 Aug
+Ages: 3 years and up</p>
+<div class="btn-wrap">
+        <button class="add-to-cart" data-id="1" data-name="toy1" data-price="₹240.89" data-image="assets/toy-1.webp" >Add to cart</button>   
+        <button style="font-size: 19px; padding: 4px 6px ; background-color: rgb(16, 30, 50); color: aliceblue;" onclick="alert(`purchased`)">Buy Now</button>
+        </div>  
+      </div>
+
+      <div class="box-col product">
+        <img id="imggg" style="height: 200px;  width: 250px;" src="assets/product3-2.jpg">
+        <img src="assets/rating_img.png" width="60px" height="15px">
+        <a href="#">₹245.99 For better deal</a><span>₹250.99</span>
+        <p>Buy 3 get 3% Buy 4 get 4% Buy 5 get 5% Off
+FREE delivery Sat, 2 Aug on first order
+Or fastest delivery Tomorrow, 1 Aug
+Ages: 4 - 10 years</p>
+<div class="btn-wrap">
+        <button class="add-to-cart" data-image="assets/toy-2.webp" data-id="2" data-name="toy2" data-price="₹245.99">Add to cart</button>   
+        <button style="font-size: 19px; padding: 4px 6px ; background-color: rgb(16, 30, 50); color: aliceblue;" onclick="alert(`purchased`)">Buy Now</button>
+        </div>
+      </div>
+
+       <div class="box-col"class="product">
+        <img id="imggg" style="height: 200px; width: 250px;" src="assets/product3-3.jpg">
+        <img src="assets/rating_img.png" width="60px" height="15px">
+        <a href="#">₹210.00 For better deal</a><span>₹250.99</span>
+        <p>FREE delivery Sat, 2 Aug on first order
+Or fastest delivery Tomorrow, 1 Aug
+Ages: 18 months and up</p>
+<div class="btn-wrap">
+         <button class="add-to-cart" data-image="assets/toy-3.webp" data-id="3" data-name="toy3" data-price="₹210.00">Add to cart</button> 
+         <button style="font-size: 19px; padding: 4px 6px ; background-color: rgb(16, 30, 50); color: aliceblue;" onclick="alert(`purchased`)">Buy Now</button>
+         </div>
+      </div>
+      <div class="box-col">
+        <img id="imggg" style="height: 200px; width: 250px;" src="assets/product3-4.jpg">
+        <img src="assets/rating_img.png" width="60px" height="15px">
+        <a href="#">₹180.65 <pre style="background-color:rgb(171, 13, 8); color: aliceblue; width: 250px; height: 30px; padding: 4px 7px ;">purches now For better deal</pre> </a><span>₹250.99</span><big>Save 33%</big> 
+        <p style="color: #eb4a0b;">Buy 5% Off FREE delivery Sat, 2 Aug on first order Or fastest delivery Tomorrow, 1 Aug Ages: 36</p>
+        <div class="btn-wrap">
+         <button class="add-to-cart" data-image="assets/toy-4.webp" data-id="4" data-name="toy4" data-price="₹180.65">Add to cart</button> 
+         <button style="font-size: 19px; padding: 4px 6px ; background-color: rgb(16, 30, 50); color: aliceblue;" onclick="alert(`purchased`)">Buy Now</button>
+         </div>
+      </div>
+       <div class="box-col">
+        <img id="imggg" style="height: 200px;  width: 250px;"  src="assets/product3-5.jpg">
+        <img src="assets/rating_img.png" width="60px" height="15px">
+        <a href="#">₹180.65 For better deal</a><span>₹190.65</span>
+        <p>Buy 3 get 3% Buy 4 get 4% Buy 5 get 5% Off FREE delivery Sat, 2 Aug on first order Or fastest delivery Tomorrow, 1 Aug Ages: 36 months - 10 years</p>
+       <div class="btn-wrap">
+            <button class="add-to-cart" data-image="assets/toy-5.webp" data-id="5" data-name="toy5" data-price="₹180.65">Add to cart</button>
+            <button style="font-size: 19px; padding: 4px 6px ; background-color: rgb(16, 30, 50); color: aliceblue;" onclick="alert(`purchased`)">Buy Now</button>
+            </div> 
+      </div>
+      <div class="box-col">
+        <img id="imggg" style="height: 200px;  width: 250px;" src="assets/product3-6.jpg">
+        <img src="assets/rating_img.png" width="60px" height="15px">
+        <a href="#">₹110.65 <pre style="background-color: rgb(171, 13, 8); color: aliceblue; width: 250px; height: 30px; padding: 4px 7px ;">purches now For better deal</pre> </a><span>₹180.65</span><big>Save 10%</big> 
+        <p>Buy 3 get 3% Buy 4 get 4% Buy 5 get 5% Off FREE delivery Sat, 2 Aug on first order Or fastest delivery Tomorrow, 1 Aug Ages: 4 - 10 years</p>
+        <div class="btn-wrap">
+               <button class="add-to-cart" data-image="assets/toy-2.webp" data-id="5" data-name="toy5" data-price="₹110.65">Add to cart</button> 
+               <button style="font-size: 19px; padding: 4px 6px ; background-color: rgb(16, 30, 50); color: aliceblue;" onclick="alert(`purchased`)">Buy Now</button>
+               </div>
+      </div>
+       <div class="box-col">
+        <img id="imggg" style="height: 200px;  width: 250px;" src="assets/product3-7.jpg">
+        <img src="assets/rating_img.png" width="60px" height="15px">
+        <a href="#">₹150.65 For better deal</a><span>₹180.65</span>
+        <div class="btn-wrap">
+         <button class="add-to-cart" data-image="assets/toy-6.webp" data-id="6" data-name="toy6" data-price="₹150.65">Add to cart</button> 
+         <button style="font-size: 19px; padding: 4px 6px ; background-color: rgb(16, 30, 50); color: aliceblue;" onclick="alert(`purchased`)">Buy Now</button>
+         </div>
+      </div>
+      <div class="box-col">
+        <img id="imggg" style="height: 200px;  width: 250px;" src="assets/product3-8.jpg">
+        <img src="assets/rating_img.png" width="60px" height="15px">
+        <a href="#">₹330.65 For better deal</a><span>₹350.65</span><big style="width: 220px;">Save 33.33% by token</big> 
+        <P>Buy 3 get 3% Buy 4 get 4% Buy 5 get 5% Off FREE delivery Sat, 2 Aug on first order Or fastest delivery Tomorrow, 1 Aug Ages: 36 months - 10 years</P>
+      </div>
+       <div class="box-col">
+        <img id="imggg" style="height: 200px; width: 250px;" src="assets/product3-9.jpg">
+        <img src="assets/rating_img.png" width="60px" height="15px">
+        <a href="#">₹140.65 For better deal</a><span>₹180.65</span>
+        <p>Buy 3 get 3% Buy 4 get 4% Buy 5 get 5% Off
+FREE delivery Sat, 2 Aug on first order
+Or fastest delivery Tomorrow, 1 Aug
+Ages: 36 months - 10 years</p>
+<div class="btn-wrap">
+            <button class="add-to-cart" data-image="assets/toy-8.webp" data-id="7" data-name="toy7" data-price="₹140.65">Add to cart</button>
+            <button style="font-size: 19px; padding: 4px 6px ; background-color: rgb(16, 30, 50); color: aliceblue;" onclick="alert(`purchased`)">Buy Now</button>
+            </div> 
+      </div>
+      <div class="box-col">
+        <img id="imggg" style="height: 200px;  width: 250px;" src="assets/product3-10.jpg">
+        <img src="assets/rating_img.png" width="60px" height="15px">
+        <a href="#">₹880.65 <pre style="background-color:rgb(171, 13, 8); color: aliceblue; width: 250px; height: 30px; padding: 4px 7px ;">purches now For better deal</pre> </a><span>₹900.65</span>
+        <p>FREE delivery Sat, 2 Aug on first order
+Or fastest delivery Tomorrow, 1 Aug
+Ages: 36 months - 18 years</p>
+<div class="btn-wrap">
+         <button class="add-to-cart" data-image="assets/toy-9.webp" data-id="8" data-name="toy8" data-price="₹880.65 ">Add to cart</button> 
+         <button style="font-size: 19px; padding: 4px 6px ; background-color: rgb(16, 30, 50); color: aliceblue;" onclick="alert(`purchased`)">Buy Now</button>
+         </div>
+      </div>
+      <div class="box-col">
+        <img id="imggg" style="height: 200px;  width: 250px;" src="assets/product3-1.jpg">
+        <img src="assets/rating_img.png" width="60px" height="15px">
+        <a href="#">₹880.65 <pre style="background-color:rgb(171, 13, 8); color: aliceblue; width: 250px; height: 30px; padding: 4px 7px ;">purches now For better deal</pre> </a><span>₹900.65</span>
+        <p>FREE delivery Sat, 2 Aug on first order
+Or fastest delivery Tomorrow, 1 Aug
+Ages: 36 months - 18 years</p>
+<div class="btn-wrap">
+         <button class="add-to-cart" data-image="assets/toy-9.webp" data-id="8" data-name="toy8" data-price="₹880.65 ">Add to cart</button> 
+         <button style="font-size: 19px; padding: 4px 6px ; background-color: rgb(16, 30, 50); color: aliceblue;" onclick="alert(`purchased`)">Buy Now</button>
+         </div>
+      </div>
+      <div class="box-col">
+        <img id="imggg" style="height: 200px; width: 250px;" src="assets/product3-3.jpg">
+        <img src="assets/rating_img.png" width="60px" height="15px">
+        <a href="#">₹880.65 <pre style="background-color:rgb(171, 13, 8); color: aliceblue; width: 250px; height: 30px; padding: 4px 7px ;">purches now For better deal</pre> </a><span>₹900.65</span>
+        <p>FREE delivery Sat, 2 Aug on first order
+Or fastest delivery Tomorrow, 1 Aug
+Ages: 36 months - 18 years</p>
+<div class="btn-wrap">
+         <button class="add-to-cart" data-image="assets/toy-9.webp" data-id="8" data-name="toy8" data-price="₹880.65 ">Add to cart</button> 
+         <button style="font-size: 19px; padding: 4px 6px ; background-color: rgb(16, 30, 50); color: aliceblue;" onclick="alert(`purchased`)">Buy Now</button>
+         </div>
+      </div>
+       
+      
+      </div>
+    <footer>  
+   <div class="footer">
+   <div class="footer_container">
+    <div class="footer_content">
+     <div class="kk-shoping-website">
+      <h3>KK WORLD</h3>
+      <p>Email:kumkum.maurya.7.7.7@gmail.com</p>
+      <p>Phone no.- 949653845</p>
+      </div>
+     <div class="service">
+      <h3>service</h3>
+      <a href="#">Today's Deal</a>
+      <a href="#"> Costomer Service</a>
+      <a href="#">Resistry</a>
+      <a href="#">Gift cards</a>
+      <a href="#">Sell</a>
+      </div>
+      <div class="useful_links">
+        <h3>useful links</h3>
+       <a href="">home</a>
+       <a href="">About us</a>
+       <a href="">Contect us</a>
+       <a href="">Privacy policy</a>
+       
+      </div>
+     <div class="Social_Network">
+       <h3>Social Network</h3>
+      <div >
+          <h5>follow us on</h5>
+          <div class="sizee">
+          <a  style="color: #eb4a0b;  "href="https://github.com/Kumkum777"><i class="fa-brands fa-square-github"></i></a>
+         <div>
+          <a  style="color: #eb4a0b ;" href="https://www.linkedin.com/feed/?doFeedRefresh=true&nis=true&lipi=urn%3Ali%3Apage%3Ad_flagship3_feed%3BzpHdJRJtR4SEWSGH9KBrig%3D%3D"><i class="fa-brands fa-linkedin"></i></a>
+        
+      </div>
+          <a style="color: #eb4a0b "href="https://www.whatsapp.com/"><i class="fa-brands fa-square-whatsapp"></i></a>
+         <a style="color: #eb4a0b "  href="https://www.youtube.com/"><i class="fa-brands fa-square-youtube"></i></a>
+          <a style="color: #eb4a0b "   href="https://x.com/?lang=en"><i class="fa-brands fa-square-twitter"></i></a>
+
+      </div>
+     </div>
+     </div>
+   </div>
+   </div>
+   
+     </footer>
+     <script src="toy.js"></script>
+      <script>
+        function sideButton (){
+           const sidebar = document.getElementsByClassName('sidebar')[0];
+            if(sidebar.style.display=="none")
+            {
+              sidebar.style.display="flex";
+            }
+           else{
+             sidebar.style.display="none";
+           }
+           
+        }
+     </script>
+    </body>
+</html>
